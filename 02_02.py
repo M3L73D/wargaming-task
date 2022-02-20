@@ -24,27 +24,5 @@ class RingBuffer:
         #print(f"DEBUG: read_from {self.read_from}")
         return data
     
-    def print(self):
-        return print(self.data)
-
-    
-if __name__ == "__main__":
-    buf = RingBuffer(7)
-    for i in range(10):
-        buf.write(i)
-    print(buf.read())
-    print(buf.read())
-    print(buf.read())
-    print(buf.read())
-    print(buf.read())
-    buf.write(120)
-    print(buf.read())
-    buf.write(121)
-    print(buf.read())
-    print(buf.read())
-    print(buf.read())
-    buf.write(122)
-    print(buf.read())
-    buf.print()
-    
-    
+    def __str__(self):
+        return self.data.__str__()

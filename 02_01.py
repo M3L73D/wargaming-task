@@ -14,5 +14,3 @@ class RingBuffer:
             return self.data.pop(0)
         except IndexError:
             raise Exception("Trying to read from empty ring buffer")
-    
-    
